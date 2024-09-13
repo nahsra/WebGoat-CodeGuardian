@@ -16,6 +16,5 @@ jobs:
       - uses: pixee/upload-tool-results-action@v1
         with:
           tool: sonar
-          # TODO: You must set the SONAR_TOKEN secret either for this repository or for your organization
-          # See https://github.com/marketplace/actions/upload-tool-results-to-pixeebot#for-sonar-users for more details
+          pixee-api-url: https://ntt.pixee.ai
           sonar-token: ${{ secrets.SONAR_TOKEN }}
