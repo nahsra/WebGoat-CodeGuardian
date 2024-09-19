@@ -1,4 +1,4 @@
-name: "Publish Sonar JSON to Pixee"
+name: "Publish Sonar JSON to CodeGuardian"
 on:
   check_run:
     types: [completed]
@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   share:
-    name: Upload Sonar Results to Pixeebot
+    name: Upload Sonar Results to CodeGuardian
     runs-on: ubuntu-latest
     if: ${{ github.event.check_run.name == 'SonarCloud Code Analysis' }}
     steps:
